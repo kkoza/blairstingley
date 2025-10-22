@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Blair Stingley</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&family=Cormorant:wght@300;400;500&display=swap');
+        
+        @font-face {
+            font-family: 'Bochan Serif';
+            src: url('fonts/Bochan Serif.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #faf9f7;
+            color: #2d2d2d;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #2d2d2d;
+        }
+
+        h1 {
+            font-family: 'Bochan Serif', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+        }
+
+        h1 a {
+            color: #2d2d2d;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a.nav-link {
+            font-family: 'Raleway', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #2d2d2d;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        nav a.nav-link:hover {
+            opacity: 0.5;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-icons a {
+            color: #2d2d2d;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .social-icons a:hover {
+            opacity: 0.5;
+        }
+
+        .social-icons svg {
+            width: 20px;
+            height: 20px;
+            fill: #2d2d2d;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-family: 'Cormorant', serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height: 1.8;
+            letter-spacing: 0.02em;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-image {
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            background: #e8e6e3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+
+            nav {
+                align-self: flex-end;
+                gap: 1rem;
+            }
+
+            nav a.nav-link {
+                font-size: 0.85rem;
+            }
+
+            .social-icons {
+                gap: 1rem;
+            }
+
+            .content {
+                padding: 2rem 1.5rem;
+            }
+
+            .about-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="/">BLAIR STINGLEY</a></h1>
+            <nav>
+                <a href="/about.html" class="nav-link">About</a>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/byblairstingley" target="_blank" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/blairstingley/" target="_blank" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="content">
+            <div class="about-section">
+                <div class="about-text">
+                    <p>Blair Stingley is a licensed architect and artist living in San Francisco.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/aboutblair.jpg" alt="Blair Stingley" onerror="this.style.display='none'; this.parentElement.innerHTML='PLACEHOLDER IMAGE';">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
