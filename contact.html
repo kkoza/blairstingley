@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Blair Stingley</title>
+    <title>Contact - Blair Stingley</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500&display=swap');
         
@@ -122,31 +122,15 @@
         }
 
         .content {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 4rem 2rem;
         }
 
-        .about-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-text {
-            font-family: 'Cormorant', serif;
-            font-size: 1.1rem;
-            font-weight: 400;
-            line-height: 1.8;
-            letter-spacing: 0.02em;
+        .contact-section {
             opacity: 0;
             animation: fadeIn 0.8s ease-out forwards;
             animation-delay: 0.3s;
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
         }
 
         @keyframes fadeIn {
@@ -158,25 +142,85 @@
             }
         }
 
-        .about-image {
-            width: 100%;
-            aspect-ratio: 3 / 4;
-            background: #e8e6e3;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-            font-size: 0.9rem;
-            letter-spacing: 0.1em;
-            opacity: 0;
-            animation: fadeIn 0.8s ease-out forwards;
-            animation-delay: 0.5s;
+        .contact-section h2 {
+            font-family: 'gzjd', sans-serif;
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            margin-bottom: 2rem;
+            text-align: center;
         }
 
-        .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .contact-blurb {
+            font-family: 'Cormorant', serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 1.8;
+            letter-spacing: 0.02em;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-family: 'gzjd', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            font-family: 'Cormorant', serif;
+            font-size: 1rem;
+            padding: 0.75rem;
+            border: 1px solid #1C1C1C;
+            background-color: #faf9f7;
+            color: #1C1C1C;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #666;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            font-family: 'gzjd', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 1rem 2rem;
+            border: 2px solid #1C1C1C;
+            background-color: transparent;
+            color: #1C1C1C;
+            cursor: pointer;
+            transition: all 0.3s;
+            align-self: center;
+        }
+
+        .submit-button:hover {
+            background-color: #1C1C1C;
+            color: #faf9f7;
         }
 
         @media (max-width: 768px) {
@@ -210,13 +254,8 @@
                 padding: 2rem 1.5rem;
             }
 
-            .about-section {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .about-text {
-                font-size: 1rem;
+            .contact-section h2 {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -244,15 +283,24 @@
         </header>
 
         <div class="content">
-            <div class="about-section">
-                <div class="about-text">
-                  <p>Blair Stingley is a licensed architect and artist based in San Francisco. Blair's artwork reflects her training as an architect through structured use of line, form, and asymmetrical balance. She responds to the beauty of people and places with mediums like ink, watercolor, charcoal, acrylic, and digital mixed media. An all-purpose maker, Blair eagerly engages new methods, insisting that anything smaller than a building is surely within her wheelhouse.</p>
-                  <p>In both architecture and art, Blair considers her clients to be great muses and creates unique pieces that reflect their story and environment. She regularly works on a commission basis, designing to her client's taste and space with both her craftsmanship and aesthetic discernment. Her commission process begins as a design exercise championing collaboration with the client that later results in personal and specific work. </p>
-                  <p> Blair graduated with her Professional Bachelor of Architecture from the University of Texas at Austin in 2021. Since then, Blair has been working at a boutique architecture firm designing homes, restaurants, and public housing in the Bay area. She loves allowing her architectural and artistic practices to inform one another while also considering them entirely different skill sets. It is an honor for her to both express herself and others through her work. </p>
-                </div>
-                <div class="about-image">
-                    <img src="images/aboutblair.jpg" alt="Blair Stingley" onerror="this.style.display='none'; this.parentElement.innerHTML='ABOUT BLAIR';">
-                </div>
+            <div class="contact-section">
+                <h2>Get In Touch</h2>
+                <p class="contact-blurb">Have an idea? Let's get it started. Currently open to commissions.</p>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
             </div>
         </div>
     </div>
